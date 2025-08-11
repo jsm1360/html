@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block요소와 inline요소</title>
+    <style>
+        p {
+            margin: 0 auto;
+            width: 200px;
+        }
+        span {
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>블록요소는 부모의 100%를 차지한다</li>
+        <li>width가 적용되지만, 오른쪽 빈공간은 margin이 잡힌다</li>
+        <li>margin에 0 auto를 지정하면 빈공간이 좌우로 나뉘면서 가운데에 위치한다</li>
+    </ol>
+    <ul>
+        <li>인라인요소는 너비만큼 차지</li>
+        <li>width가 적용되지 않는다</li>
+    </ul>
+
+
+
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <span>xxxx</span>
+</body>
+</html>

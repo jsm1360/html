@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline-block</title>
+    <style>
+       #menu ul {
+        padding: 0;
+    }
+       #menu ul li {
+            width: 100px;
+            display : inline-block;
+            border: 3px solid skyblue;
+            text-align: center;
+            border-radius: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+        /* 상태에 대한 선택 : 가상 클래스 선택자 */
+        #menu>ul>li:hover{
+            background-color: rgb(255, 255, 255);
+            border: 3px solid rgb(94, 255, 129);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>짜장면</li>
+            <li>볶음밥</li>
+            <li>삼선짬뽕</li>
+            <li>잡채밥</li>
+        </ul>
+    </div>
+</body>
+</html>

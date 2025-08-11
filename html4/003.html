@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table { width: 500px;}
+        table, td, th { border: 1px solid lightgray; border-collapse: collapse;}
+        table th { background-color: rgb(240,220,240);}
+        .center { text-align: center;}
+        /* 
+            기본적인 선택자
+            - 태그 선택자 : 특정 요소 모두 선택( 우선순위 : 1)
+            - class 선택자 : 여러개를 선택( 우선순위 : 10)
+            - id 선택자 : 요소에 이름을 부여해 그 요소만 선택( 우선순위 : 100)
+        */
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+                <td>1개</td>
+                <td class="center">1500</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2" class="center">1000원</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+            </tr>
+            <tr>
+                <td>금액</td>
+                <td colspan="3" class="center">6500원</td>
+            </tr>
+            </tbody>
+    </table>
+</body>
+</html>

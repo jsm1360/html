@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table { width: 500px; height: 200px;}
+        table, td, th { border:1px solid lightgray; border-collapse: collapse; }
+        .blue { background-color: rgb(96, 244, 255);}
+        .yellow { background-color: rgb(255,255,153);}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="2">Person</th>
+            <th colspan="2">Department</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="blue">Name</td>
+            <td rowspan="4" class="blue">photo</td>
+            <td class="yellow">Name</td>
+            <td rowspan="2" class="yellow">image</td>
+        </tr>
+        <tr>
+            <td class="blue">Surname</td>
+            <td class="yellow">structure</td>
+        </tr>
+        <tr>
+            <td class="blue">State</td>
+            <td class="yellow">Floor</td>
+            <td rowspan="2" class="yellow">QR code</td>
+        </tr>
+        <tr>
+            <td class="blue">City</td>
+            <td class="yellow">Room</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">E-mail</td>
+            <td colspan="2">Tel. number</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

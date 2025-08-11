@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+    <style>
+        /* 하위, 자손( descendent ) 선택자 */
+        #page table { width: 300px ;}
+        #page table, #page td, #page th { border:1px solid lightgray; border-collapse: collapse;}
+        /* 자식 선택자 */
+        #page th { text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="page">
+    <!-- 
+        semantic(의미) markup
+        tbody, thead, tfoot
+    -->
+    <table>
+        <caption>명단</caption>
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>전상민</th>
+            <th>24세</th>
+        </tr>
+        <tr>
+            <th>양회식</th>
+            <th>24세</th>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
