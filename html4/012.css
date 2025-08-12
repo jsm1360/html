@@ -1,0 +1,22 @@
+    <style>
+        /* 전체(universal) 선택자 : 우선순위 0 -> reset */
+        * { margin:0; padding: 0;}
+        #idol ul li {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        #idol ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        #idol ul {
+            background-color: rgb(180,180,180);
+        }
+        #idol ul li a:hover {
+            background-color: rgb(140,140,140);
+        }
+    </style>
