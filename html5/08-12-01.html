@@ -20,8 +20,11 @@
         - method : 서버에 요청하는 형식 get vs post
             get 방식
                 - 서버에서 뭔가를 읽어낼때 ( 여러번 실행해도 상관없다 )
+                - urlencoded된 요청 데이터가 주소표시줄을 이용해 서버로 전송된다 -> 즐겨찾기
+                - urlencoded된 요청 데이터가 주소표시중에 담겨있는 것 : querystring
             post 방식
                 - 서버에서 어떤 처리를 수행해서 서버가 변경될 때 ( 여러번 실행하면 안된다 )
+                - urlencoded된 요청 데이터가 보이지 않는다 -> 
     -->
      <form method="get">
         <input name="username">
