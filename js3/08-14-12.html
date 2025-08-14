@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증감 연산자</title>
+</head>
+<body>
+  <input type="text" id="val" value="10">
+  <button onclick="inc()">증가</button>
+  <hr>
+  <p id="target"></p>
+<!-- 
+    #target에 #val 값을 출력하시오
+    버튼을 클릭할때마다 1씩 증가된 값을 출력하시오  
+-->
+    <script>
+      const $val = document.getElementById('val');
+      const $target = document.getElementById('target');
+      $target.innerHTML = $val.value;
+
+      function inc() {
+        let value = Number($target.innerHTML);
+        value++;
+        $target.innerHTML = value;
+      }
+    </script>
+</body>
+</html>

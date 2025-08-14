@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body> 
+  <!-- 교수님이 하신거 -->
+    국어:<input type="number" id="kor"><br>
+    영어:<input type="number" id="eng"><br>
+    <button onclick="score()">계산</button>
+    <hr>
+    <p>총점:<span id="tot"></span></p>
+    <p>평균:<span id="avg"></span></p>
+    <script>
+      function score() {
+        const kor = Number(document.getElementById('kor').value);
+        const eng = Number(document.getElementById('eng').value);
+        const tot = kor + eng;
+        const avg = tot / 2;
+        document.getElementById('tot').innerHTML = tot;
+        document.getElementById('avg').innerHTML = avg;
+      }
+    </script>
+</body>
+</html>

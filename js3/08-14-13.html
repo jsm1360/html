@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>카운터</h1>
+  <input type="text" id="val">
+  <button onclick="inc()">증가</button>
+  <button onclick="reset()">초기화</button>
+  <h2 id="target"></h2>
+  <script>
+    // 버튼을 2개 생성
+    // 첫번째 버튼을 클릭하면 숫자를 증가
+    // 두번째 버튼을 클릭하면 숫자를 0으롤 (리셋)
+    let target = 0;
+    const $target = document.getElementById('target');
+    $target.innerHTML = target;
+
+          function inc() {
+            target++;
+            $target.innerHTML = target;
+          }
+          
+          function reset() {
+            target=0;
+            $target.innerHTML = target;
+          }
+  </script>
+</body>
+</html>

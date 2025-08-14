@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    두 숫자를 입력받아 더해서 출력하시오
+  -->
+    <input type="number" id="val1" placeholder="첫번째 숫자">
+    <input type="number" id="val2" placeholder="두번째 숫자">
+    <button onclick="calc()">더하기</button>
+    <p id="target"></p>
+    <script>
+      function calc() {
+        const input1 = document.getElementById('val1').value;
+        const input2 = document.getElementById('val2').value;
+        const val1 = Number(input1);
+        const val2 = Number(input2);
+        const result = val1 + val2;
+       document.getElementById('target').innerHTML = result;
+      }
+    </script>
+</body>
+</html>

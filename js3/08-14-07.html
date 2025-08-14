@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="radius">
+  <button onclick="calc();">계산</button>
+  <p id="area"></p>
+  <script>
+    // 원의 면적을 계산해 출력
+    // 1. #radius 읽기
+    // 2. 원주율
+    // 3. 곱해서 출력
+    function calc() {
+      const radius = document.getElementById('radius').value;
+      const PI = 3.14;
+      const 면적 = radius * PI * PI;
+      document.getElementById('area').innerHTML = 면적;
+    }
+  </script>
+</body>
+</html>

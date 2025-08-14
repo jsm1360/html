@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    국어 영어 성적을 입력받아 버튼을 클릭하면 총점, 평균을 출력하시오
+  -->
+    <input type="number" id="kor" placeholder="국어점수">
+    <input type="number" id="eng" placeholder="영어점수">
+    <button onclick="score()">점수</button>
+    <p id="target">총점</p>
+    <p id="target2">평균</p>
+    <script>
+      function score() {
+        const input1 = document.getElementById('kor').value;
+        const input2 = document.getElementById('eng').value;
+        const kor = Number(input1);
+        const eng = Number(input2);
+        const 총점 = kor + eng;
+        const 평균 = (kor + eng) / 2;
+        document.getElementById('target').innerHTML = 총점;
+        document.getElementById('target2').innerHTML = 평균;
+      }
+    </script>
+</body>
+</html>
