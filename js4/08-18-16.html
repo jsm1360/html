@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <input type="number" id="키" placeholder="키">
+      <input type="number" id="체중" placeholder="체중">
+      <button onclick="calc ()">결과</button>
+      <hr>
+      <p id="result">결과</p>
+      <script>
+        function calc() {
+          const 키 = document.getElementById('키').value;
+          const 체중 = document.getElementById('체중').value;
+          const 키1 = parseFloat(키/100);
+          const bmi = 체중/(키1*키1);
+          const result = (bmi<=23) ? "정상체중" : "정상체중을 넘습니다"
+          document.getElementById('result').innerHTML = result;
+          console.log(bmi);
+        }
+        // 키에 175 입력하면 1.75만들기
+        // 체중을 키의 제곱으로 나누기
+      </script>
+</body>
+</html>

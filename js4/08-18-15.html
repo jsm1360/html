@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="나이" placeholder="나이">
+  <button onclick="calc ()">입장료</button>
+  <hr>
+  <p id="result">입장료</p>
+  <script>
+    function calc() {
+      const 나이 = document.getElementById('나이').value;
+      const result = (나이<25 || 나이>=65) ? "무료입니다" : "3000원입니다";
+        document.getElementById('result').innerHTML = result;
+    }
+  </script>
+</body>
+</html>
