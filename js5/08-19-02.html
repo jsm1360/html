@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- DOM 작업 -->
+  <h1>홀짝 판정
+  </h1>
+  <input type="text" id="val">
+  <button onclick="판정();">판정</button>
+  <hr>
+  <p id="target"></p>
+  <script>
+    const $target = document.getElementById('target');
+    const $val = document.getElementById('val');
+    function 판정() {
+      const val = $val.value;
+      const result = val%2==0? "짝수입니다" : "홀수입니다";
+      $target.innerHTML = result;
+    }
+  </script>
+</body>
+</html>

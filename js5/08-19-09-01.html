@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  온도입력:<input type="text" id="degree">
+  <select onchange="변환()" id="select">
+    <option value="1">섭씨로</option>
+    <option value="2">화씨로</option>
+  </select>
+  <input type="text" id="result" disabled>
+  <script>
+    function 변환() {
+      const degree = document.getElementById('degree').value;
+      const select = document.getElementById('select').value;
+      const result = select==="1"? (degree-32)*(5/9) : degree*(9/5)+32;
+      document.getElementById('result').value = result;
+    }
+  </script>
+</body>
+</html>

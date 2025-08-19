@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button onclick="toggle()" id="btn">ON</button>
+<br>
+<img id="light">
+
+<script>
+  const $light = document.getElementById('light');
+  const $btn = document.getElementById('btn');
+
+  // 버튼 스타일 고정
+  $btn.style.width = "80px";      // 버튼 너비 고정
+  $btn.style.height = "40px";     // 버튼 높이 고정
+  $btn.style.fontSize = "16px";   // 글자 크기 고정
+  $btn.style.textAlign = "center";
+
+  // 이미지 크기와 위치 고정
+  $light.style.width = "100px";
+  $light.style.height = "180px";
+  $light.style.display = "block";
+  $light.style.margin = "20px auto"; // 가운데 정렬
+
+  // 처음엔 꺼진 상태
+  let isOn = false;
+  $light.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+
+  function toggle() {
+    if (isOn) {
+      $light.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+      $btn.textContent = "ON";
+      isOn = false;
+    } else {
+      $light.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+      $btn.textContent = "OFF";
+      isOn = true;
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="money" placeholder="한달 급여">
+  <input type="text" id="month" placeholder="근무개월수">
+  <button onclick="수령액()">총수령액</button>
+  <button onclick="세금()">소득세</button>
+  <hr>
+  <p>수령액:<span id="salary"></span>원, 소득세:<span id="tax"></span>원</p>
+  <script>
+      const $money = document.getElementById('money');
+      const $month = document.getElementById('month');
+    function 수령액() {
+      const money = +$money.value;
+      const month = +$month.value;
+      document.getElementById('salary').innerHTML = money * month;
+    }
+    function 세금() {
+      const money = +$money.value;
+      const month = +$month.value;
+      document.getElementById('tax').innerHTML = (money * month)*0.033;
+    }
+    // 한달 급여를 입력, 근무개월수 입력
+    // 수령액 출력
+    // 세금 출력(수령액의 3.3%)
+  </script>
+</body>
+</html>

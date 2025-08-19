@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="score">
+  <button onclick="calc()">점수</button>
+  <hr>
+  <p id="target"></p>
+  <script>
+    function calc() {
+    const score = document.getElementById('score').value;
+    const result = (score>=70) ? "합격" : "불합격";
+    document.getElementById('target').innerHTML = result;
+    }
+  </script>
+</body>
+</html>

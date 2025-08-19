@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="kor" placeholder="국어">
+  <input type="text" id="eng" placeholder="영어">
+  <button onclick="calc()">점수</button>
+  <hr>
+  <p id="target"></p>
+  <script>
+    function calc() {
+    const input1 = document.getElementById('kor').value;
+    const input2 = document.getElementById('eng').value;
+    const kor = Number(input1);
+    const eng = Number(input2);
+    const 평균 = (kor+eng)/2;
+    console.log(평균);
+    const result = (평균>=70) ? "합격" : "불합격";
+    document.getElementById('target').innerHTML = result;
+    }
+    
+  </script>
+</body>
+</html>
