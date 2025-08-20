@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red { color:red;}
+    .blue { color:blue;}
+    .green { color:green;}
+  </style>
+</head>
+<body>
+  <!-- 
+  점수를 입력받아 등급을 출력하시오
+  A 파랑 , B,C,D 초록 , F 빨강
+  90 A등급      80 B등급      70 C등급      60 D등급      F등급
+  -->
+  <div id="app">
+  <input type="number" id="score" placeholder="점수">
+  <button onclick="calc()">결과</button>
+  <div id="result"></div>
+  </div>
+  <script>
+    function calc() {
+      const score = +document.getElementById('score').value;
+      if(score>100 || score<0) {
+        alert("점수는 0에서 100사이 입니다");
+        // 함수를 종료시킨다
+        document.getElementById('score').value="";
+        document.getElementById('score').focus();
+        return;
+      }
+      const $result = document.getElementById('result');
+      let html;
+      if(score>=90) {
+        html = `<p class= 'blue'>A등급</p>`
+      } else if(score>=80) {
+        html = `<p class= 'green'>B등급</p>`
+      } else if(score>=70) {
+        html = `<p class= 'green'>C등급</p>`
+      } else if(score>=60) {
+        html = `<p class= 'green'>D등급</p>`
+      } else {
+        html = `<p class= 'red'>F등급</p>`
+      }
+      $result.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

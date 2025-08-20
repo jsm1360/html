@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ar = [90, 80, 60, 75, 85, 55, 95];
+    // 70점 이상이면 합격이다. 합격자 평균 점수
+    let hap = 0;
+    let count = 0;
+    let avg = 0;
+
+    for(const element of ar) {
+      if(element>=90) {
+        console.log("우수");
+      } else if (element>=70) {
+        console.log("합격");
+        hap=hap+element;
+        count++;
+      } else {
+        console.log("불합격");
+      }
+    }
+    avg = hap/count;
+    console.log(`합계:${hap}, 개수:${count}, 평균${avg}`);
+  </script>
+</body>
+</html>

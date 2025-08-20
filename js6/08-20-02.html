@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .red { color:red;}
+    .blue { color:blue;}
+    #app {
+      width:600px;
+      margin: 0 auto;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+  <input type="text" id="kor" placeholder="국어점수">
+  <input type="text" id="eng" placeholder="영어점수">
+  <button onclick="calc()">결과</button>
+  <div id="result"></div>
+  </div>
+  <script>
+    function calc() {
+    const kor = +document.getElementById('kor').value;
+    const eng = +document.getElementById('eng').value;
+    const $result = document.getElementById('result');
+    let message;
+    if(kor>=70 && eng>=70) {
+      massage = `<p class='blue'>합격</p>`;
+    } else {
+      massage = `<p class='red'>불합격</p>`;
+    }
+    $result.innerHTML = massage;
+  }
+  </script>
+  <!-- 영어점수와 국어점수를 입력받아 모두 70점 이상이면 합격, 아니면 불합격으로.
+        합격이면 파랑글자, 불합격이면 빨강글자 -->
+</body>
+</html>

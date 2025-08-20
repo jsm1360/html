@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //합계, 개수, 평균, 최대, 최소
+    const ar = [100, 70, 60, 55, 90]
+    let hap = 0;
+    let count = 0;
+    // 배열 원소의 합계
+    for(const element of ar) {
+      hap=hap+element;
+      //hap+=element;
+      count++; //개수
+    }
+    console.log(`합계:${hap}`);
+    console.log(`개수:${count}`);
+    console.log(`평균:${hap/count}`);
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="val">
+  <button onclick="입력();">입력</button>
+  <hr>
+  <ul id="target">
+  </ul>
+  <script>
+    // 숫자를 입력하면 ul에 출력
+    const ar = [];
+    const $val = document.getElementById('val');
+    const $target = document.getElementById('target');
+    function 입력() {
+      if($val.value==='') {
+        return;
+      }
+      const val = +$val.value;
+      $val.value='';
+      $val.focus();
+      ar.push(val);
+
+      let html = ``;
+      for(const element of ar) {
+        html+=`<li>${element}</li>`;
+      }
+      $target.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
