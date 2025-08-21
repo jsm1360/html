@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #app {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header, nav {
+      height: 50px;
+      line-height: 50px;
+      background-color: lightpink;
+      text-align: center;
+    }
+    aside {
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      background-color: lightcoral;
+      text-align: center;
+      float: left;
+    }
+    section {
+      width: 800px;
+      float: left;
+      background-color: lightsalmon;
+      min-height: 400px;
+    }
+    footer {
+      background-color: palevioletred;
+      text-align: center;
+    }
+    main {
+      overflow: hidden;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <header>사이트로고</header>
+    <nav>메인</nav>
+    <main>
+      <aside>왼쪽</aside>
+      <section>본문</section>
+      <aside>오른쪽</aside>
+    </main>
+    <footer>아래</footer>
+  </div>
+</body>
+</html>

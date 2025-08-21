@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="idol">
+
+  </ul>
+  <script>
+    const idols = [
+      {name:'송하영', nai:'27세', role:'리더, 메인보컬, 메인댄서'},
+      {name:'박지원', nai:'27세', role:'메인보컬'},
+      {name:'이채영', nai:'25세', role:'서브보컬, 래퍼'},
+      {name:'이나경', nai:'25세', role:'서브보컬, 리드댄서'},
+      {name:'백지헌', nai:'22세', role:'서브보컬'}
+    ]
+    
+    const $idol = document.getElementById('idol');
+    let html='';
+    for(const idol of idols) {
+      html+=`<li>${idol.name} ${idol.nai} ${idol.role}</li>`;
+    }
+    $idol.innerHTML = html;
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* css reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #app {
+      width:1000px;
+      margin: 0 auto;
+    }
+    header, nav {
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid red;
+      text-align: center;
+    }
+    aside {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: lightblue;
+      float:left;
+    }
+    section {
+      width: 800px;
+      background-color: lightcoral;
+      float:left;
+      text-align: center;
+      min-height: 400px;
+    }
+    footer {
+      background-color: lightgreen;
+      text-align: center;
+    }
+    /* float된 자식들은 부모의 높이를 계산할 때 적용되지 않는다
+       따라서 부모의 높이는 0이되고, 부모 뒤에 있는 요소들이 위로 치고 올라오는 문제가 발생
+       clear : float된 자식들의 높이가 부모에 반영되게 하자 
+    */
+    main {
+      overflow: hidden;
+    }
+  </style>
+  <title>3단 레이아웃 마크업</title>
+</head>
+<body>
+  <div id="app">
+    <header>사이트로고</header>
+    <nav>메인메뉴</nav>
+    <main>
+        <aside>왼쪽</aside>
+        <section>본문</section>
+        <aside>오른쪽</aside>
+    </main>
+    <footer>아래쪽</footer>
+  </div>
+</body>
+</html>
