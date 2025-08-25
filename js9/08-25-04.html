@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ar = [
+      {name:'홍길동', jumsu:75},{name:'전우치', jumsu:60},{name:'임꺽정', jumsu:80}
+    ];
+    
+    let hap = 0;
+    let count = 0;
+    let avg = 0;
+
+    for(const el of ar) {
+      if(el>=70) {
+        console.log("hap");
+        hap+=el.hap;
+        count++;
+      } else {
+        console.log("이하");
+      }
+      avg = hap/count;
+      console.log(`합계:${hap}, 평균:${avg}, 이름:${name}`);
+    }
+    // 70점 이상인 점수의 합계 : 155
+
+    // 70점 이상인 점수의 평균 : 77.5
+
+    // 70점 이상인 학생의 이름 : 홍길동, 임꺽정
+  </script>
+</body>
+</html>

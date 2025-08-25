@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ar = [75, 80, 90, 65, 85];
+    
+    
+    function getNumber() {
+      let number = 0;
+      for(const el of ar) {
+        if(el>=70) {
+          number++;
+        }
+      }
+      return number;
+    }
+
+    const 숫자 = getNumber(ar);
+    console.log(숫자);
+
+    // 합격자의 점수 합계를 리턴하는 함수를 정의하고 호출하시오
+    function getTotal(ar) {
+      let total = 0;
+      for(const el of ar) {
+        if(el<=70) {
+          total += el;
+        }
+      }
+      return total;
+    }
+
+    // 평균을 출력하시오
+    const avg = getTotal(ar)/getNumber(ar);
+    console.log(avg);
+  </script>
+</body>
+</html>
