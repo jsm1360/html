@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <input type="text" id="username" placeholder="아이디...">
+  <input type="password" id="password" placeholder="비밀번호...">
+  <button onclick="signup();">회원가입</button>
+
+  <script>
+    const storedMembers = localStorage.getItem('member');
+    let member;
+    if (storedMembers===null) {
+      members = [];
+    } else {
+      members = JSON.parse(storeMembers);
+    }
+
+     const signup = function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const member = {username:username, password:password};
+      members.push(member);
+      localStorage.setItem('members', JSON.stringify(members));
+      location.href = "login.html";
+    }
+    // *routing* 외우기
+
+  </script>
+</body>
+</html>

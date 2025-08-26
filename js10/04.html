@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+</head>
+<body>
+  <script>
+    // localStorage, sessionStorage는 string 저장 가능
+    // JS 객체는 저장할 수가 없다
+    // JS 객체를 문자열로 바꿔서 저장하자(JavaScript Object Notation : JSON*중요*)
+    const user = {name:'spring', password:'1234'};
+
+    const str = JSON.stringify(user);
+    // {"user":"name", "password":"1234"}
+    console.log(str);
+
+    const obj = JSON.parse(str);
+    console.log(obj);
+
+    const users = [{username:'spring', password:'1234'}, {username:'summer', password:'1234'}];
+    // localStorage에는 문자열만 저장할 수 있다 -> JSON으로 바꿔서 저장
+    localStorage.setItem("users", JSON.stringify(user));
+
+    const ar = localStorage.getItem("users");
+    console.log(ar);
+    console.log(JSON.parse(ar));
+  </script>
+</body>
+</html>

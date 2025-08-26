@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos</title>
+</head>
+<body>
+  <script>
+    // 1. 저장기능 - 웹 브라우저의 저장 API( localStorage )
+    // 한번 저장하면 삭제할 때까지 유지
+    localStorage.setItem('name', '홍길동');
+    const name = localStorage.getItem('name');
+    console.log(name);
+
+    // 현재 창에서만 유지 ( sessionStorage ) 창을 닫으면 사라진다
+    sessionStorage.setItem('irum', '전우치');
+
+    // 2. 간단 로그인
+
+
+  </script>
+</body>
+</html>

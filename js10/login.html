@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <input type="text" id="username" placeholder="아이디...">
+  <input type="password" id="password" placeholder="비밀번호...">
+  <button onclick="login();">로그인</button>
+</head>
+<body>
+  <script>
+    const storedMembers = localStorage.getItem('members');
+    if(storedMembers===null) {
+      location.href = "/signup.html";
+    }
+    const members = JSON.parse(storedMembers);
+
+
+    const login = function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      // members에 회원 아이디, 비밀번호가 여러개 저장되어 있다
+      // 로그인 성공 - 회원 정보가 한번만 일치하면 "로그인 성공"
+      // 로그인 실패 - 회원 정보 비교가 모두 실패해야 한다
+      let 검색성공 = false;
+      for(const member of members) {
+        if(member.username===username && member.password===password) {
+          검색성공 = true;
+        }
+      }
+      if(검색성공) {
+        location.href = 'todos.html';
+      } else {
+        alert ("로그인에 실패했습니다");
+      }
+    }
+  </script>
+</body>
+</html>

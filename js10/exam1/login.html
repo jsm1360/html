@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>로그인</h1>
+  <input type="text" id="username" placeholder="아이디 입력...">
+  <input type="password" id="password" placeholder="비밀번호 입력...">
+  <button onclick="login();">로그인</button>
+
+  <script>
+    // 1. 로그인 상태하면 todos로 이동
+    const username = sessionStorage.getItem('username');
+    if(username!==null) {
+      location.href = 'todos.html';
+    }
+
+    // 2. 비로그인이라면 localStorage에서 회원 정보를 꺼낸다 ->
+    //    회원정보가 없다면 signup으로 이동
+    let users = localStorage.getItem('users');
+    if(users===null) {
+      location.href="signup.html";
+    }
+    users = JSON.parse(users);
+
+    // 3. 로그인 버튼을 클릭하면 로그인 처리
+    const login = function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      let 로그인성공 = false;
+      for(const user of users) {
+        if(username===user.username && password===user.password) {
+          // 한번이라도 같으면 로그인 성공
+          로그인성공 = true;
+          break;
+        }
+      }
+      if(로그인성공) {
+        sessionStorage.setItem("username", username);
+        location.href = "login.html";
+      } else {
+        alert("로그인에 실패했습니다")
+      }
+    }
+  </script>
+</body>
+</html>

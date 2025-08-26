@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <input type="text" id="username" placeholder="아이디 입력...">
+  <input type="password" id="password" placeholder="비밀번호 입력...">
+  <button onclick="signup();">회원가입</button>
+
+  <script>
+    // 1. 로그인했으면 todos로 이동
+    if(sessionStorage.getItem("username")!==null) {
+      location.href = "todos.html"
+    }
+
+
+    // 2. 비로그인이면 users를 꺼내라
+    let users = localStorage.getItem("users");
+    if(users===null) {
+      users = [];
+    }
+    
+
+    const signup = function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      for(const user of username) {
+        // 사용자가 입력한 username이 이미 존재한다면
+        if(username===user.username) {
+          alert("사용중인 아이디입니다");
+          return;
+        }
+      }
+      const user = {username:username, password:password};
+      users.push(user);
+      location.href = "login.html";
+    }
+    
+    
+  </script>
+</body>
+</html>
